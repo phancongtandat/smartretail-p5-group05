@@ -64,6 +64,7 @@ The script builds with `-std=c++17 -Wall -Wextra -Werror`, runs 32 acceptance ca
 
 - [Test cases and actual results](tests/test_cases.md)
 - [Machine-readable results](tests/results.json)
+- [Executed verification record](docs/verification.md)
 - [Original corrected test expectation](tests/history/TC26-initial-output.txt)
 - [Requirements and traps](docs/requirements.md)
 - [Architecture and algorithms](docs/architecture.md)
