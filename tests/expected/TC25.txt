@@ -1,0 +1,1 @@
+Exit 0; no candidates; Top 0 and best-store table still present

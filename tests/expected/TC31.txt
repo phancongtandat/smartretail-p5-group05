@@ -1,0 +1,1 @@
+Every candidate stock=0; known-store report still ranks S001

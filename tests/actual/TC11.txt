@@ -1,0 +1,17 @@
+STDOUT
+QUERY: P001 Query (C, B, 100, 4.0) @S001
+
+ID | Product | Sim | Stock | Adj | Final
+P002 | Other | 10 | 0 | -5 | 5 << OUT OF STOCK
+
+TOP 1 SIMILAR PRODUCTS
+1. P002 Other | 5 pts | OUT OF STOCK - pre-order
+   reasons: category +4, brand +3, close price +2, close rating +1
+   in stock at: no other store
+
+BEST SUBSTITUTE BY STORE
+S001 | P002 Other | 5 pts | stock 0 <- current store
+
+STDERR
+
+EXIT 0

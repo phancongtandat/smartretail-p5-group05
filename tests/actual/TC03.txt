@@ -1,0 +1,68 @@
+STDOUT
+QUERY: P001 Nike Pegasus 41 (Running Shoes, Nike, 3590000, 4.7) @S001
+
+ID | Product | Sim | Stock | Adj | Final
+P009 | Asics Gel-Nimbus 26 | 7 | 8 | +1 | 8
+P039 | Asics Novablast 5 | 7 | 23 | +1 | 8
+P010 | Asics Gel-Kayano 31 | 7 | 57 | +1 | 8
+P013 | Puma Deviate Nitro 3 | 7 | 20 | +1 | 8
+P040 | Nike Pegasus 41 GTX | 7 | 5 | +1 | 8
+P005 | Nike Revolution 7 | 7 | 12 | +1 | 8
+P011 | Hoka Clifton 9 | 7 | 2 | +0 | 7
+P002 | Adidas Ultraboost 5 | 7 | 2 | +0 | 7
+P020 | Nike Air Force 1 | 6 | 34 | +1 | 7
+P025 | Nike Dunk Low | 6 | 89 | +1 | 7
+P016 | Nike Pegasus Trail 5 | 6 | 3 | +1 | 7
+P014 | New Balance Fresh Foam 880 | 6 | 7 | +1 | 7
+P015 | Adidas Adizero SL | 6 | 35 | +1 | 7
+P012 | Hoka Bondi 8 | 5 | 20 | +1 | 6
+P003 | Nike Vomero 18 | 10 | 0 | -5 | 5 << OUT OF STOCK
+P008 | Nike Air Max 270 | 4 | 3 | +1 | 5
+P026 | Nike LeBron 22 | 4 | 6 | +1 | 5
+P034 | Nike Everyday Cushion Socks 3P | 4 | 103 | +1 | 5
+P029 | Nike Dri-FIT Running Tee | 4 | 18 | +1 | 5
+P007 | Puma Velocity Nitro | 4 | 4 | +1 | 5
+P006 | Adidas Duramo SL | 4 | 1 | +0 | 4
+P004 | New Balance 1080 | 3 | 5 | +1 | 4
+P033 | Nike Pro Training Tank | 3 | 42 | +1 | 4
+P023 | New Balance 550 | 3 | 2 | +0 | 3
+P019 | Asics Trabuco 12 | 2 | 8 | +1 | 3
+P028 | Puma MB.04 | 2 | 24 | +1 | 3
+P018 | Adidas Terrex Agravic | 2 | 34 | +1 | 3
+P027 | Adidas Dame 9 | 2 | 29 | +1 | 3
+P021 | Adidas Samba OG | 1 | 5 | +1 | 2
+P024 | Adidas Stan Smith | 1 | 16 | +1 | 2
+P038 | New Balance Gym Bag | 1 | 44 | +1 | 2
+P030 | Adidas Own The Run Jacket | 0 | 33 | +1 | 1
+P037 | Hoka Performance Socks | 0 | 116 | +1 | 1
+P022 | Puma Suede Classic | 0 | 15 | +1 | 1
+P032 | Asics Core Running Tight | 0 | 24 | +1 | 1
+P035 | Adidas Running Cap | 0 | 33 | +1 | 1
+P036 | Puma Running Belt | 0 | 1 | +0 | 0
+P017 | Hoka Speedgoat 6 | 3 | 0 | -5 | -2 << OUT OF STOCK
+P031 | Puma Run Favorite Shorts | 0 | 0 | -5 | -5 << OUT OF STOCK
+
+TOP 3 SIMILAR PRODUCTS
+1. P009 Asics Gel-Nimbus 26 | 8 pts | 8 in stock
+   reasons: category +4, close price +2, close rating +1
+2. P039 Asics Novablast 5 | 8 pts | 23 in stock
+   reasons: category +4, close price +2, close rating +1
+3. P010 Asics Gel-Kayano 31 | 8 pts | 57 in stock
+   reasons: category +4, close price +2, close rating +1
+Note: P003 is the most similar (10/10) but drops to rank 15 because it is out of stock.
+
+BEST SUBSTITUTE BY STORE
+S001 | P009 Asics Gel-Nimbus 26 | 8 pts | stock 8 <- current store
+S002 | P003 Nike Vomero 18 | 11 pts | stock 13
+S003 | P003 Nike Vomero 18 | 11 pts | stock 8
+
+STDERR
+Warning data/full/products.csv:42: invalid product fields, price or rating -> skipped
+Warning data/full/products.csv:43: expected 6 columns -> skipped
+Warning data/full/products.csv:44: duplicate product_id P005 -> skipped
+Warning data/full/products.csv:45: invalid product fields, price or rating -> skipped
+Warning data/full/inventory.csv:122: unknown product_id P999 -> skipped
+Warning data/full/inventory.csv:123: invalid inventory fields or stock -> skipped
+Warning data/full/inventory.csv:124: duplicate inventory key S001/P004 -> skipped
+
+EXIT 0

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "TC01",
+    "scenario": "P5 TC01 / normal sample",
+    "command": "bin/p5 data/sample P001",
+    "expected": "Ranked rows [('P005', 7, 12, 1, 8), ('P002', 7, 2, 0, 7), ('P003', 10, 0, -5, 5), ('P008', 4, 3, 1, 5), ('P007', 4, 4, 1, 5), ('P006', 4, 1, 0, 4), ('P004', 3, 5, 1, 4)]; Top 3 P005 P002 P003; P003 rank 3; best S001 P005",
+    "actual": "[output](actual/TC01.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC02",
+    "scenario": "P5 TC02 / exact 20% and 0.3 boundaries",
+    "command": "bin/p5 data/full P001 S001 40",
+    "expected": "P040 Sim=7, stock=5, adj=1, final=8; neither close-price nor close-rating reason",
+    "actual": "[output](actual/TC02.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC03",
+    "scenario": "P5 TC03 / ID tie-break with P039",
+    "command": "bin/p5 data/full P001",
+    "expected": "Top 3 P009, P039, P010; P009 precedes P039 when Final, Sim and rating tie",
+    "actual": "[output](actual/TC03.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC04",
+    "scenario": "P5 TC04 / dirty lines and duplicate keys in full",
+    "command": "bin/p5 data/full P001",
+    "expected": "39 candidates; 7 warnings; first valid P005 and S001/P004 retained; unknown P999 skipped",
+    "actual": "[output](actual/TC04.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC05",
+    "scenario": "P5 TC05 / empty dataset",
+    "command": "bin/p5 data/edge/empty P001",
+    "expected": "Exit 1; clear query-not-found error; no crash",
+    "actual": "[output](actual/TC05.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC06",
+    "scenario": "P5 TC06 / availability elsewhere",
+    "command": "bin/p5 data/full P001 S001 15",
+    "expected": "P003 appears at rank 15; S002 stock 13 and S003 stock 8 listed",
+    "actual": "[output](actual/TC06.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC07",
+    "scenario": "P5 TC07 / inclusive max-price filter",
+    "command": "bin/p5 data/full P001 S002 40 3990000",
+    "expected": "P003 at price 3990000 retained; every candidate price <=3990000",
+    "actual": "[output](actual/TC07.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC08",
+    "scenario": "Generic not found",
+    "command": "bin/p5 data/full UNKNOWN",
+    "expected": "Exit 1; query not found",
+    "actual": "[output](actual/TC08.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC09",
+    "scenario": "Dirty dataset with no valid candidate",
+    "command": "bin/p5 data/edge/dirty P001",
+    "expected": "4 warnings; no candidates; valid S001/P001=4 retained after earlier invalid row",
+    "actual": "[output](actual/TC09.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC10",
+    "scenario": "Generic division-by-zero guard",
+    "command": "bin/p5 tests/fixtures/zero P001",
+    "expected": "P002 Sim=8, Final=9; no price points for zero query price",
+    "actual": "[output](actual/TC10.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC11",
+    "scenario": "Missing stock line",
+    "command": "bin/p5 tests/fixtures/missing-stock P001",
+    "expected": "P002 Sim=10, stock=0, adj=-5, Final=5",
+    "actual": "[output](actual/TC11.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC12",
+    "scenario": "Invalid CLI S001 0",
+    "command": "bin/p5 data/sample P001 S001 0",
+    "expected": "Exit 1; clear error containing K must",
+    "actual": "[output](actual/TC12.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC13",
+    "scenario": "Invalid CLI S001 -1",
+    "command": "bin/p5 data/sample P001 S001 -1",
+    "expected": "Exit 1; clear error containing K must",
+    "actual": "[output](actual/TC13.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC14",
+    "scenario": "Invalid CLI S001 abc",
+    "command": "bin/p5 data/sample P001 S001 abc",
+    "expected": "Exit 1; clear error containing K must",
+    "actual": "[output](actual/TC14.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC15",
+    "scenario": "Invalid CLI S001 3 abc",
+    "command": "bin/p5 data/sample P001 S001 3 abc",
+    "expected": "Exit 1; clear error containing max_price must",
+    "actual": "[output](actual/TC15.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC16",
+    "scenario": "Invalid CLI S001 3 0",
+    "command": "bin/p5 data/sample P001 S001 3 0",
+    "expected": "Exit 1; clear error containing max_price must",
+    "actual": "[output](actual/TC16.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC17",
+    "scenario": "Invalid CLI --brand",
+    "command": "bin/p5 data/sample P001 --brand",
+    "expected": "Exit 1; clear error containing missing value",
+    "actual": "[output](actual/TC17.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC18",
+    "scenario": "Invalid CLI --unknown",
+    "command": "bin/p5 data/sample P001 --unknown",
+    "expected": "Exit 1; clear error containing unknown option",
+    "actual": "[output](actual/TC18.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC19",
+    "scenario": "Invalid CLI S001 2147483648",
+    "command": "bin/p5 data/sample P001 S001 2147483648",
+    "expected": "Exit 1; clear error containing K must",
+    "actual": "[output](actual/TC19.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC20",
+    "scenario": "Invalid CLI S001 3 9223372036854775808",
+    "command": "bin/p5 data/sample P001 S001 3 9223372036854775808",
+    "expected": "Exit 1; clear error containing max_price must",
+    "actual": "[output](actual/TC20.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC21",
+    "scenario": "Invalid CLI --brand Nike --brand Nike",
+    "command": "bin/p5 data/sample P001 --brand Nike --brand Nike",
+    "expected": "Exit 1; clear error containing repeated option",
+    "actual": "[output](actual/TC21.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC22",
+    "scenario": "Required arguments missing",
+    "command": "bin/p5",
+    "expected": "Exit 1; usage printed",
+    "actual": "[output](actual/TC22.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC23",
+    "scenario": "Missing input files",
+    "command": "bin/p5 tests/fixtures/no-such-directory P001",
+    "expected": "Exit 1; cannot open products.csv",
+    "actual": "[output](actual/TC23.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC24",
+    "scenario": "Brand filter and bounded K",
+    "command": "bin/p5 data/full P001 S001 100 --brand Nike",
+    "expected": "All ranked candidates are Nike; Top-K limited to candidate count",
+    "actual": "[output](actual/TC24.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC25",
+    "scenario": "Filter leaves no candidates",
+    "command": "bin/p5 data/sample P001 --brand Unknown",
+    "expected": "Exit 0; no candidates; Top 0 and best-store table still present",
+    "actual": "[output](actual/TC25.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC26",
+    "scenario": "Max-price sample from brief",
+    "command": "bin/p5 data/full P001 S002 3 4000000",
+    "expected": "8 excluded; best S001 P039, S002 P003, S003 P003",
+    "actual": "[output](actual/TC26.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC27",
+    "scenario": "Optional CSV export",
+    "command": "bin/p5 data/sample P001 --export tests/fixtures/top.csv",
+    "expected": "Header rank,store_id,product_id,sim,stock,final and exactly 3 correct rows",
+    "actual": "[output](actual/TC27.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC28",
+    "scenario": "Export path cannot open",
+    "command": "bin/p5 data/sample P001 --export tests/fixtures/missing/out.csv",
+    "expected": "Exit 1; explicit export open error",
+    "actual": "[output](actual/TC28.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC29",
+    "scenario": "long long extremes without multiplication overflow",
+    "command": "bin/p5 tests/fixtures/limits P001",
+    "expected": "P003 Sim=10 Final=11; P002 Sim=8 Final=8",
+    "actual": "[output](actual/TC29.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC30",
+    "scenario": "Windows CRLF input",
+    "command": "bin/p5 tests/fixtures/crlf P001",
+    "expected": "P002 Sim=10 stock=2 adj=0 Final=10",
+    "actual": "[output](actual/TC30.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC31",
+    "scenario": "Unknown store treated as all zero stock",
+    "command": "bin/p5 data/sample P001 S999 40",
+    "expected": "Every candidate stock=0; known-store report still ranks S001",
+    "actual": "[output](actual/TC31.txt)",
+    "status": "Pass",
+    "detail": "Acceptance assertions passed"
+  },
+  {
+    "id": "TC32",
+    "scenario": "All valid full queries / all stores",
+    "command": "python3 tests/verify.py",
+    "expected": "120 query/store combinations match independent exact-arithmetic oracle",
+    "actual": "[output](actual/TC32.txt)",
+    "status": "Pass",
+    "detail": "120 combinations"
+  }
+]

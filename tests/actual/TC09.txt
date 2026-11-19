@@ -1,0 +1,18 @@
+STDOUT
+QUERY: P001 Nike Pegasus 41 (Running Shoes, Nike, 3590000, 4.7) @S001
+
+ID | Product | Sim | Stock | Adj | Final
+No matching candidates.
+
+TOP 0 SIMILAR PRODUCTS
+
+BEST SUBSTITUTE BY STORE
+S001 | no matching candidates <- current store
+
+STDERR
+Warning data/edge/dirty/products.csv:3: invalid product fields, price or rating -> skipped
+Warning data/edge/dirty/products.csv:4: invalid product fields, price or rating -> skipped
+Warning data/edge/dirty/inventory.csv:2: invalid inventory fields or stock -> skipped
+Warning data/edge/dirty/inventory.csv:3: invalid inventory fields or stock -> skipped
+
+EXIT 0

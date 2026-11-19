@@ -1,0 +1,14 @@
+STDOUT
+QUERY: P001 Nike Pegasus 41 (Running Shoes, Nike, 3590000, 4.7) @S001
+
+ID | Product | Sim | Stock | Adj | Final
+No matching candidates.
+
+TOP 0 SIMILAR PRODUCTS
+
+BEST SUBSTITUTE BY STORE
+S001 | no matching candidates <- current store
+
+STDERR
+
+EXIT 0

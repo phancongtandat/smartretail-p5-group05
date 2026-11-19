@@ -1,0 +1,41 @@
+STDOUT
+QUERY: P001 Nike Pegasus 41 (Running Shoes, Nike, 3590000, 4.7) @S999
+
+ID | Product | Sim | Stock | Adj | Final
+P003 | Nike Vomero 18 | 10 | 0 | -5 | 5 << OUT OF STOCK
+P002 | Adidas Ultraboost 5 | 7 | 0 | -5 | 2 << OUT OF STOCK
+P005 | Nike Revolution 7 | 7 | 0 | -5 | 2 << OUT OF STOCK
+P008 | Nike Air Max 270 | 4 | 0 | -5 | -1 << OUT OF STOCK
+P007 | Puma Velocity Nitro | 4 | 0 | -5 | -1 << OUT OF STOCK
+P006 | Adidas Duramo SL | 4 | 0 | -5 | -1 << OUT OF STOCK
+P004 | New Balance 1080 | 3 | 0 | -5 | -2 << OUT OF STOCK
+
+TOP 7 SIMILAR PRODUCTS
+1. P003 Nike Vomero 18 | 5 pts | OUT OF STOCK - pre-order
+   reasons: category +4, brand +3, close price +2, close rating +1
+   in stock at: no other store
+2. P002 Adidas Ultraboost 5 | 2 pts | OUT OF STOCK - pre-order
+   reasons: category +4, close price +2, close rating +1
+   in stock at: S001 (stock 2)
+3. P005 Nike Revolution 7 | 2 pts | OUT OF STOCK - pre-order
+   reasons: category +4, brand +3
+   in stock at: S001 (stock 12)
+4. P008 Nike Air Max 270 | -1 pts | OUT OF STOCK - pre-order
+   reasons: brand +3, close rating +1
+   in stock at: S001 (stock 3)
+5. P007 Puma Velocity Nitro | -1 pts | OUT OF STOCK - pre-order
+   reasons: category +4
+   in stock at: S001 (stock 4)
+6. P006 Adidas Duramo SL | -1 pts | OUT OF STOCK - pre-order
+   reasons: category +4
+   in stock at: S001 (stock 1)
+7. P004 New Balance 1080 | -2 pts | OUT OF STOCK - pre-order
+   reasons: close price +2, close rating +1
+   in stock at: S001 (stock 5)
+
+BEST SUBSTITUTE BY STORE
+S001 | P005 Nike Revolution 7 | 8 pts | stock 12
+
+STDERR
+
+EXIT 0

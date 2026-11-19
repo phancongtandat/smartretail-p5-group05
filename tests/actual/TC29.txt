@@ -1,0 +1,19 @@
+STDOUT
+QUERY: P001 Large (C, B, 9223372036854775807, 5.0) @S001
+
+ID | Product | Sim | Stock | Adj | Final
+P003 | Near | 10 | 3 | +1 | 11
+P002 | Zero | 8 | 2 | +0 | 8
+
+TOP 2 SIMILAR PRODUCTS
+1. P003 Near | 11 pts | 3 in stock
+   reasons: category +4, brand +3, close price +2, close rating +1
+2. P002 Zero | 8 pts | only 2 left
+   reasons: category +4, brand +3, close rating +1
+
+BEST SUBSTITUTE BY STORE
+S001 | P003 Near | 11 pts | stock 3 <- current store
+
+STDERR
+
+EXIT 0

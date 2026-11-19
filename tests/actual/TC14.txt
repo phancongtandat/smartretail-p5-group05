@@ -1,0 +1,6 @@
+STDOUT
+
+STDERR
+Error: K must be a positive integer within int range
+
+EXIT 1

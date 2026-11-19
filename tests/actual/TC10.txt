@@ -1,0 +1,16 @@
+STDOUT
+QUERY: P001 Zero (C, B, 0, 4.0) @S001
+
+ID | Product | Sim | Stock | Adj | Final
+P002 | Also Zero | 8 | 3 | +1 | 9
+
+TOP 1 SIMILAR PRODUCTS
+1. P002 Also Zero | 9 pts | 3 in stock
+   reasons: category +4, brand +3, close rating +1
+
+BEST SUBSTITUTE BY STORE
+S001 | P002 Also Zero | 9 pts | stock 3 <- current store
+
+STDERR
+
+EXIT 0

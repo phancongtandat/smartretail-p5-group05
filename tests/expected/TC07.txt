@@ -1,0 +1,1 @@
+P003 at price 3990000 retained; every candidate price <=3990000

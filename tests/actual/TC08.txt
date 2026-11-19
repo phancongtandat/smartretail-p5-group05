@@ -1,0 +1,13 @@
+STDOUT
+
+STDERR
+Warning data/full/products.csv:42: invalid product fields, price or rating -> skipped
+Warning data/full/products.csv:43: expected 6 columns -> skipped
+Warning data/full/products.csv:44: duplicate product_id P005 -> skipped
+Warning data/full/products.csv:45: invalid product fields, price or rating -> skipped
+Warning data/full/inventory.csv:122: unknown product_id P999 -> skipped
+Warning data/full/inventory.csv:123: invalid inventory fields or stock -> skipped
+Warning data/full/inventory.csv:124: duplicate inventory key S001/P004 -> skipped
+Error: query product not found: UNKNOWN
+
+EXIT 1

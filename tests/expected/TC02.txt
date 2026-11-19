@@ -1,0 +1,1 @@
+P040 Sim=7, stock=5, adj=1, final=8; neither close-price nor close-rating reason

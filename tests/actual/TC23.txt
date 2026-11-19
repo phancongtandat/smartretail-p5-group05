@@ -1,0 +1,6 @@
+STDOUT
+
+STDERR
+Error: cannot open tests/fixtures/no-such-directory/products.csv
+
+EXIT 1

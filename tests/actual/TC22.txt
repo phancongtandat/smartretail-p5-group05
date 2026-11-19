@@ -1,0 +1,6 @@
+STDOUT
+
+STDERR
+Usage: p5 <data_folder> <product_id> [store_id] [K] [max_price] [--brand <brand>] [--export <file.csv>]
+
+EXIT 1

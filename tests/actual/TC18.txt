@@ -1,0 +1,6 @@
+STDOUT
+
+STDERR
+Error: unknown option --unknown
+
+EXIT 1

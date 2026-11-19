@@ -1,0 +1,6 @@
+STDOUT
+
+STDERR
+Error: repeated option --brand
+
+EXIT 1

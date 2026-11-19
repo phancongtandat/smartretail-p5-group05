@@ -1,0 +1,1 @@
+39 candidates; 7 warnings; first valid P005 and S001/P004 retained; unknown P999 skipped

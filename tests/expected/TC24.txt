@@ -1,0 +1,1 @@
+All ranked candidates are Nike; Top-K limited to candidate count

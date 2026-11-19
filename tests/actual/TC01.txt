@@ -1,0 +1,28 @@
+STDOUT
+QUERY: P001 Nike Pegasus 41 (Running Shoes, Nike, 3590000, 4.7) @S001
+
+ID | Product | Sim | Stock | Adj | Final
+P005 | Nike Revolution 7 | 7 | 12 | +1 | 8
+P002 | Adidas Ultraboost 5 | 7 | 2 | +0 | 7
+P003 | Nike Vomero 18 | 10 | 0 | -5 | 5 << OUT OF STOCK
+P008 | Nike Air Max 270 | 4 | 3 | +1 | 5
+P007 | Puma Velocity Nitro | 4 | 4 | +1 | 5
+P006 | Adidas Duramo SL | 4 | 1 | +0 | 4
+P004 | New Balance 1080 | 3 | 5 | +1 | 4
+
+TOP 3 SIMILAR PRODUCTS
+1. P005 Nike Revolution 7 | 8 pts | 12 in stock
+   reasons: category +4, brand +3
+2. P002 Adidas Ultraboost 5 | 7 pts | only 2 left
+   reasons: category +4, close price +2, close rating +1
+3. P003 Nike Vomero 18 | 5 pts | OUT OF STOCK - pre-order
+   reasons: category +4, brand +3, close price +2, close rating +1
+   in stock at: no other store
+Note: P003 is the most similar (10/10) but drops to rank 3 because it is out of stock.
+
+BEST SUBSTITUTE BY STORE
+S001 | P005 Nike Revolution 7 | 8 pts | stock 12 <- current store
+
+STDERR
+
+EXIT 0

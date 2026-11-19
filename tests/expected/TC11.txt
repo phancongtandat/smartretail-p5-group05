@@ -1,0 +1,1 @@
+P002 Sim=10, stock=0, adj=-5, Final=5

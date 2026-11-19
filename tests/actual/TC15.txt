@@ -1,0 +1,6 @@
+STDOUT
+
+STDERR
+Error: max_price must be a positive integer within long long range
+
+EXIT 1

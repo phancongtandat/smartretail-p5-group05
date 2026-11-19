@@ -1,0 +1,57 @@
+STDOUT
+QUERY: P001 Nike Pegasus 41 (Running Shoes, Nike, 3590000, 4.7) @S001
+
+ID | Product | Sim | Stock | Adj | Final
+P040 | Nike Pegasus 41 GTX | 7 | 5 | +1 | 8
+P005 | Nike Revolution 7 | 7 | 12 | +1 | 8
+P020 | Nike Air Force 1 | 6 | 34 | +1 | 7
+P025 | Nike Dunk Low | 6 | 89 | +1 | 7
+P016 | Nike Pegasus Trail 5 | 6 | 3 | +1 | 7
+P003 | Nike Vomero 18 | 10 | 0 | -5 | 5 << OUT OF STOCK
+P008 | Nike Air Max 270 | 4 | 3 | +1 | 5
+P026 | Nike LeBron 22 | 4 | 6 | +1 | 5
+P034 | Nike Everyday Cushion Socks 3P | 4 | 103 | +1 | 5
+P029 | Nike Dri-FIT Running Tee | 4 | 18 | +1 | 5
+P033 | Nike Pro Training Tank | 3 | 42 | +1 | 4
+
+TOP 11 SIMILAR PRODUCTS
+1. P040 Nike Pegasus 41 GTX | 8 pts | 5 in stock
+   reasons: category +4, brand +3
+2. P005 Nike Revolution 7 | 8 pts | 12 in stock
+   reasons: category +4, brand +3
+3. P020 Nike Air Force 1 | 7 pts | 34 in stock
+   reasons: brand +3, close price +2, close rating +1
+4. P025 Nike Dunk Low | 7 pts | 89 in stock
+   reasons: brand +3, close price +2, close rating +1
+5. P016 Nike Pegasus Trail 5 | 7 pts | 3 in stock
+   reasons: brand +3, close price +2, close rating +1
+6. P003 Nike Vomero 18 | 5 pts | OUT OF STOCK - pre-order
+   reasons: category +4, brand +3, close price +2, close rating +1
+   in stock at: S002 (stock 13), S003 (stock 8)
+7. P008 Nike Air Max 270 | 5 pts | 3 in stock
+   reasons: brand +3, close rating +1
+8. P026 Nike LeBron 22 | 5 pts | 6 in stock
+   reasons: brand +3, close rating +1
+9. P034 Nike Everyday Cushion Socks 3P | 5 pts | 103 in stock
+   reasons: brand +3, close rating +1
+10. P029 Nike Dri-FIT Running Tee | 5 pts | 18 in stock
+   reasons: brand +3, close rating +1
+11. P033 Nike Pro Training Tank | 4 pts | 42 in stock
+   reasons: brand +3
+Note: P003 is the most similar (10/10) but drops to rank 6 because it is out of stock.
+
+BEST SUBSTITUTE BY STORE
+S001 | P040 Nike Pegasus 41 GTX | 8 pts | stock 5 <- current store
+S002 | P003 Nike Vomero 18 | 11 pts | stock 13
+S003 | P003 Nike Vomero 18 | 11 pts | stock 8
+
+STDERR
+Warning data/full/products.csv:42: invalid product fields, price or rating -> skipped
+Warning data/full/products.csv:43: expected 6 columns -> skipped
+Warning data/full/products.csv:44: duplicate product_id P005 -> skipped
+Warning data/full/products.csv:45: invalid product fields, price or rating -> skipped
+Warning data/full/inventory.csv:122: unknown product_id P999 -> skipped
+Warning data/full/inventory.csv:123: invalid inventory fields or stock -> skipped
+Warning data/full/inventory.csv:124: duplicate inventory key S001/P004 -> skipped
+
+EXIT 0

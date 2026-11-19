@@ -1,0 +1,6 @@
+STDOUT
+
+STDERR
+Error: missing value for --brand
+
+EXIT 1

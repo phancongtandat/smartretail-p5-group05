@@ -1,0 +1,6 @@
+STDOUT
+
+STDERR
+Error: query product not found: P001
+
+EXIT 1
